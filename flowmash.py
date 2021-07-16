@@ -1,11 +1,19 @@
 import json
 from typing import *
 
-flowmash_json: Dict
+from blessed import Terminal
+import color
+from shader import *
 
-with open('flowmash.json', 'r') as f:
-    global flowmash_json
-    flowmash_json = json.loads(f.read())
+def get_json(name):
+    with open(f"{name}.json") as f:
+        return json.loads(f.read())
 
-flowmash_json.
+# Load config
+flowmash_json = get_json('flowmash')
 
+# Init
+term = Terminal()
+
+# Run
+print('hello')
